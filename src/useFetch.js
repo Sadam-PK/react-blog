@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const useFetch = () => {
 
-    const [blogs, setBlogs] = useState(null)
+    const [data, setData] = useState(null)
     const [isPending, setPending] = useState(true)
     const [error, setError] = useState(null);
 
@@ -16,7 +16,7 @@ const useFetch = () => {
                 return res.json();
             })
             .then(data => {
-                setBlogs(data);
+                setData(data);
                 setPending(false);
                 setError(null)
             })
